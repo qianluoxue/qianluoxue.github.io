@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumen Mail Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      max-width: 40rem;
+      margin: 2.5rem auto;
+      padding: 0 1.25rem 4rem;
+      font: 17px/1.7 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif;
+      color: #1d1d1f;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #f5f5f7; }
+      a { color: #7ab8ff; }
+    }
+    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; }
+    .meta { color: #6e6e73; font-size: 0.9rem; }
+    ul { padding-left: 1.2rem; }
+    hr { margin: 3rem 0; border: 0; border-top: 1px solid #d2d2d7; }
+  </style>
+</head>
+<body>
+  <h1>Lumen Mail Privacy Policy</h1>
+  <p class="meta">Effective date: September 11, 2026<br>Developer: Lumen Mail</p>
+
+  <p>Lumen is a mail client that runs entirely on your device. Our principle is simple: <strong>your mail is yours. We can't see it, and we don't want to.</strong></p>
+
+  <h2>In one sentence</h2>
+  <p>Lumen does not collect, store, or transmit any of your personal data. There is no account system, no analytics, no advertising, and no third-party SDK.</p>
+
+  <h2>Where your mail goes</h2>
+  <p>Lumen connects directly from your device to your mail provider (for iCloud, <code>imap.mail.me.com</code> and <code>smtp.mail.me.com</code>) over encrypted connections to receive and send mail.</p>
+  <p><strong>We have no servers.</strong> Your mail never passes through any relay server belonging to Lumen, because no such server exists. This differs from some mail apps that hand your credentials to their own servers, which fetch your mail on your behalf and push it to you. Lumen does not do this.</p>
+
+  <h2>Where your password is kept</h2>
+  <p>Your app-specific password is stored in the device's system Keychain, encrypted by the operating system. It:</p>
+  <ul>
+    <li>stays on this device only; it is not synced to other devices or uploaded anywhere</li>
+    <li>is used solely to authenticate with your mail provider</li>
+    <li>is permanently deleted from the Keychain when you sign out</li>
+  </ul>
+
+  <h2>Local cache</h2>
+  <p>So the app opens with content ready to read, Lumen keeps recent messages in the app's sandboxed storage on your device. This cache:</p>
+  <ul>
+    <li>exists only on your device</li>
+    <li>is protected by the system sandbox and cannot be read by other apps</li>
+    <li>is deleted when you sign out</li>
+    <li>disappears when you delete the app</li>
+  </ul>
+
+  <h2>System APIs we use</h2>
+  <p>As required by Apple, we declare the "required reason" APIs the app uses:</p>
+  <ul>
+    <li><strong>UserDefaults</strong>: stores your preferences (signature, reader-mode default) and the signed-in email address. Used only by this app.</li>
+    <li><strong>File timestamps</strong>: used when reading and writing the local mail cache.</li>
+  </ul>
+
+  <h2>What we don't do</h2>
+  <ul>
+    <li>We don't collect personal information or usage data.</li>
+    <li>We don't track you in any way.</li>
+    <li>We don't include analytics, crash reporting, or advertising SDKs.</li>
+    <li>We don't share data with third parties, because we have no data to share.</li>
+    <li>We don't request any system permission unrelated to mail.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>Lumen collects no data from anyone, so it collects no data from children.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, we will update this page and the effective date above. Because Lumen's architecture gives us no access to your data, no change can weaken the guarantees described here.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy: <a href="mailto:iosdevbox@proton.me">iosdevbox@proton.me</a></p>
+
+  <hr>
+
+  <h1 lang="zh-Hans">Lumen Mail 隐私政策</h1>
+  <p class="meta" lang="zh-Hans">生效日期：2026 年 9 月 11 日<br>开发者：Lumen Mail</p>
+  <div lang="zh-Hans">
+    <p>Lumen 是一款完全在你设备上运行的邮件客户端。原则很简单：<strong>你的邮件是你的，我们看不到，也不想看到。</strong></p>
+    <h2>一句话总结</h2>
+    <p>Lumen 不收集、不存储、不传输你的任何个人数据。没有账号系统，没有分析统计，没有广告，没有第三方 SDK。</p>
+    <h2>你的邮件去了哪里</h2>
+    <p>Lumen 直接从你的设备通过加密连接连到你的邮件服务商（iCloud 为 <code>imap.mail.me.com</code> 与 <code>smtp.mail.me.com</code>）收发邮件。<strong>我们没有服务器。</strong>你的邮件不会经过任何属于 Lumen 的中转服务器——因为它不存在。</p>
+    <h2>你的密码存在哪里</h2>
+    <p>App 专用密码保存在设备的系统钥匙串中，由操作系统加密。它仅保存在本机、不同步、不上传；仅用于向邮件服务商证明身份；退出登录时彻底删除。</p>
+    <h2>本地缓存</h2>
+    <p>为了打开即可阅读，Lumen 会把最近的邮件保存在应用沙盒内。缓存仅存于本机、其他 App 无法读取、退出登录时删除、随卸载一并消失。</p>
+    <h2>我们使用的系统接口</h2>
+    <p><strong>UserDefaults</strong>：保存偏好设置与登录邮箱地址。<strong>文件时间戳</strong>：读写本地缓存时使用。</p>
+    <h2>我们不做的事</h2>
+    <p>不收集任何个人信息或使用数据；不追踪；不集成分析、崩溃统计或广告 SDK；不与任何第三方共享数据；不申请与邮件无关的系统权限。</p>
+    <h2>儿童隐私</h2>
+    <p>Lumen 不收集任何人的数据，因此也不收集儿童的数据。</p>
+    <h2>联系我们</h2>
+    <p>对隐私有任何疑问，请发信至：<a href="mailto:iosdevbox@proton.me">iosdevbox@proton.me</a></p>
+  </div>
+
+  <hr>
+
+  <h1 lang="zh-Hant">Lumen Mail 隱私權政策</h1>
+  <p class="meta" lang="zh-Hant">生效日期：2026 年 9 月 11 日<br>開發者：Lumen Mail</p>
+  <div lang="zh-Hant">
+    <p>Lumen 是一款完全在你裝置上執行的郵件客戶端。原則很簡單：<strong>你的郵件是你的，我們看不到，也不想看到。</strong></p>
+    <h2>一句話總結</h2>
+    <p>Lumen 不收集、不儲存、不傳輸你的任何個人資料。沒有帳號系統，沒有分析統計，沒有廣告，沒有第三方 SDK。</p>
+    <h2>你的郵件去了哪裡</h2>
+    <p>Lumen 直接從你的裝置透過加密連線連到你的郵件服務商（iCloud 為 <code>imap.mail.me.com</code> 與 <code>smtp.mail.me.com</code>）收發郵件。<strong>我們沒有伺服器。</strong>你的郵件不會經過任何屬於 Lumen 的中繼伺服器——因為它不存在。</p>
+    <h2>你的密碼存在哪裡</h2>
+    <p>App 專用密碼保存在裝置的系統鑰匙圈中，由作業系統加密。它僅保存在本機、不同步、不上傳；僅用於向郵件服務商證明身分；登出時徹底刪除。</p>
+    <h2>本地快取</h2>
+    <p>為了開啟即可閱讀，Lumen 會把最近的郵件保存在應用程式沙箱內。快取僅存於本機、其他 App 無法讀取、登出時刪除、隨解除安裝一併消失。</p>
+    <h2>我們使用的系統介面</h2>
+    <p><strong>UserDefaults</strong>：保存偏好設定與登入的電子郵件地址。<strong>檔案時間戳記</strong>：讀寫本地快取時使用。</p>
+    <h2>我們不做的事</h2>
+    <p>不收集任何個人資訊或使用資料；不追蹤；不整合分析、當機統計或廣告 SDK；不與任何第三方分享資料；不要求與郵件無關的系統權限。</p>
+    <h2>兒童隱私</h2>
+    <p>Lumen 不收集任何人的資料，因此也不收集兒童的資料。</p>
+    <h2>聯絡我們</h2>
+    <p>對隱私有任何疑問，請寄信至：<a href="mailto:iosdevbox@proton.me">iosdevbox@proton.me</a></p>
+  </div>
+</body>
+</html>
