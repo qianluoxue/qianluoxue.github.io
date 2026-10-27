@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>明灯 MingDeng</title>
+<style>
+  :root { --paper:#F7F4EE; --raised:#F0ECE4; --ink:#1B1B1E; --faded:rgba(27,27,30,.55); --cinnabar:#B74029; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+         -webkit-font-smoothing:antialiased; }
+  main { max-width:34rem; margin:0 auto; padding:5rem 1.5rem 6rem; }
+  h1 { font-family:Georgia,"Songti SC",serif; font-size:2.5rem; font-weight:500; margin:0; }
+  .rule { width:1.75rem; height:2px; background:var(--cinnabar); margin:1.25rem 0 2rem; }
+  p { margin:0 0 1.5rem; }
+  .lede { color:var(--faded); }
+  nav { display:flex; flex-direction:column; gap:.75rem; margin-top:2.5rem; }
+  a { color:var(--ink); text-decoration:none; background:var(--raised);
+      border-radius:12px; padding:1rem 1.25rem; display:flex; justify-content:space-between;
+      align-items:center; transition:background .15s; }
+  a:hover { background:#E8E3D8; }
+  a span { color:var(--faded); }
+  footer { margin-top:4rem; font-size:.8rem; color:var(--faded); }
+  footer a { display:inline; background:none; padding:0; text-decoration:underline; }
+</style>
+</head>
+<body>
+<main>
+  <h1>明灯</h1>
+  <div class="rule"></div>
+  <p class="lede">
+    输入出生时间,在你的 iPhone 上本地排出八字命盘,节气交接精确到秒;
+    再与 AI 对话,把这张盘一层层读开。无账号,无广告,无追踪。
+  </p>
+  <nav>
+    <a href="privacy-policy.html">隐私政策 <span>Privacy Policy</span></a>
+    <a href="terms-of-use.html">使用条款 <span>Terms of Use</span></a>
+  </nav>
+  <footer>
+    解读仅供娱乐与自我省思,不构成任何专业建议。<br>
+    联系:<a href="mailto:iosdevbox@proton.me">iosdevbox@proton.me</a>
+  </footer>
+</main>
+</body>
+</html>

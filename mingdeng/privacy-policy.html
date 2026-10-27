@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 · 明灯 MingDeng</title>
+<style>
+  :root { --paper:#F7F4EE; --raised:#F0ECE4; --ink:#1B1B1E; --faded:rgba(27,27,30,.55); --cinnabar:#B74029; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font:16px/1.8 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+         -webkit-font-smoothing:antialiased; }
+  main { max-width:38rem; margin:0 auto; padding:4rem 1.5rem 6rem; }
+  a.back { color:var(--faded); text-decoration:none; font-size:.85rem; }
+  h1 { font-family:Georgia,"Songti SC",serif; font-size:2rem; font-weight:500; margin:1.5rem 0 0; }
+  .rule { width:1.75rem; height:2px; background:var(--cinnabar); margin:1.25rem 0 2.5rem; }
+  h2 { font-size:1rem; font-weight:600; margin:2.75rem 0 .75rem; }
+  p { margin:0 0 1.25rem; }
+  ul { margin:0 0 1.25rem; padding-left:1.1rem; }
+  li { margin:0 0 .5rem; }
+  .updated { color:var(--faded); font-size:.85rem; }
+  .switch { margin:3.5rem 0 0; padding-top:2.5rem; border-top:1px solid rgba(27,27,30,.12); }
+  .switch a { color:var(--cinnabar); }
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="index.html">&larr; 明灯 MingDeng</a>
+
+<h1>隐私政策</h1>
+<div class="rule"></div>
+<p class="updated">最后更新:2026 年 10 月 27 日</p>
+<p>明灯(MingDeng)是一款无账号的 iOS 应用。我们的原则是:能不收集的一律不收集。</p>
+<h2>一、保存在你设备上的信息</h2>
+<p>你输入的称呼、出生日期与时间、出生地时区、经度(若填写),以及你与 AI 的全部对话,都保存在你 iPhone 的应用沙盒内。我们无法读取这些内容。删除 App 即一并删除,你也可以在「设置 → 清除所有数据」中随时手动清除。</p>
+<h2>二、提问时会发送出去的信息</h2>
+<p>当你向 AI 提问时,以下内容会通过 HTTPS 发送到我们的中转服务(运行于 Cloudflare Workers),并转发给 xAI 的 Grok API 生成回答:</p>
+<ul><li>已排好的盘面摘要,其中包含你的出生日期、出生时间与性别</li><li>你本次的问题,以及当前档案下的近期对话内容</li><li>界面语言(仅区分中文/英文)</li></ul>
+<p>我们的中转服务不将这些内容写入任何数据库或日志。xAI 对通过其 API 传入的数据的处理,适用 xAI 的隐私政策(https://x.ai/legal/privacy-policy)与服务条款。</p>
+<h2>三、匿名设备标识</h2>
+<p>为了统计每日免费提问次数,App 会在首次启动时生成一个随机 UUID,保存在本机,并随请求发送。它与你的 Apple ID、设备序列号、广告标识符均无关联,不能用于识别你本人。</p>
+<h2>四、费用</h2>
+<p>明灯目前完全免费,每天提供少量免费提问次数;没有内购,我们不接触任何支付信息。</p>
+<h2>五、我们不做的事</h2>
+<ul><li>没有账号、没有注册、没有登录</li><li>没有广告,没有广告标识符</li><li>没有第三方统计或行为分析 SDK</li><li>不出售、不交换、不共享你的任何信息</li><li>不追踪你在其他 App 或网站上的活动</li></ul>
+<h2>六、儿童</h2>
+<p>本应用不面向 13 岁以下儿童,也不会有意收集其信息。</p>
+<h2>七、你的权利</h2>
+<p>由于我们不持有可识别到你的数据,导出与删除都在你自己手中:「设置 → 清除所有数据」会立即清空本机全部内容。若你就本政策有任何疑问,可通过下方邮箱联系我们。</p>
+<h2>八、政策变更</h2>
+<p>本政策若有更新,我们会修改上方的「最后更新」日期,并在 App 内提示。</p>
+<p>联系方式:<a href="mailto:iosdevbox@proton.me">iosdevbox@proton.me</a></p>
+
+<div class="switch" id="en">
+<h1>Privacy Policy</h1>
+<div class="rule"></div>
+<p class="updated">Last updated: October 27, 2026</p>
+<p>MingDeng is an iOS app with no accounts. Our principle is simple: if we can avoid collecting something, we don&#x27;t collect it.</p>
+<h2>1. What stays on your device</h2>
+<p>The label you choose, your date and time of birth, birthplace time zone, longitude (if you enter one), and every conversation you have with the AI are stored inside this app&#x27;s sandbox on your iPhone. We cannot read any of it. Deleting the app deletes all of it, and you can erase it yourself at any time via Settings → Erase all data.</p>
+<h2>2. What is sent when you ask a question</h2>
+<p>When you ask the AI something, the following is sent over HTTPS to our relay service (running on Cloudflare Workers) and forwarded to xAI&#x27;s Grok API to generate the answer:</p>
+<ul><li>The computed chart summary, which contains your date of birth, time of birth, and sex</li><li>Your question, together with recent messages from the current chart&#x27;s conversation</li><li>Your interface language (only whether it is Chinese or English)</li></ul>
+<p>Our relay service writes none of this to any database or log. xAI&#x27;s handling of data sent through its API is governed by xAI&#x27;s privacy policy (https://x.ai/legal/privacy-policy) and terms of service.</p>
+<h2>3. Anonymous device identifier</h2>
+<p>To count your free daily questions, the app generates a random UUID on first launch, stores it on your device, and sends it with each request. It is unrelated to your Apple ID, device serial number, or advertising identifier, and cannot be used to identify you.</p>
+<h2>4. Pricing</h2>
+<p>MingDeng is currently free, with a small number of free questions each day. There are no in-app purchases, and we never handle any payment details.</p>
+<h2>5. What we do not do</h2>
+<ul><li>No accounts, no sign-up, no login</li><li>No advertising and no advertising identifier</li><li>No third-party analytics or behavioural tracking SDKs</li><li>We never sell, trade, or share your information</li><li>We do not track you across other apps or websites</li></ul>
+<h2>6. Children</h2>
+<p>This app is not directed at children under 13, and we do not knowingly collect their information.</p>
+<h2>7. Your rights</h2>
+<p>Because we hold no data that identifies you, export and deletion are entirely in your hands: Settings → Erase all data immediately clears everything on this device. If you have questions about this policy, contact us at the address below.</p>
+<h2>8. Changes</h2>
+<p>If this policy changes, we will update the date above and note it in the app.</p>
+<p>Contact: <a href="mailto:iosdevbox@proton.me">iosdevbox@proton.me</a></p>
+</div>
+</main>
+</body>
+</html>
