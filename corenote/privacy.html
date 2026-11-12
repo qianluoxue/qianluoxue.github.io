@@ -30,9 +30,9 @@
 
   <section id="en">
   <h1>CoreNote Privacy Policy</h1>
-  <p class="meta">Effective date: October 28, 2026<br>Developer: CoreNote</p>
+  <p class="meta">Effective date: November 12, 2026<br>Developer: CoreNote</p>
 
-  <p>CoreNote is a notes app with no account, no advertising, and no server of ours. If you are signed in to iCloud, your notes sync between your own devices through your private iCloud database. We cannot see them.</p>
+  <p>CoreNote is a notes app with no account, no advertising, and no server of ours. If you are signed in to iCloud, your notes sync between your own devices through your private iCloud database. We cannot see them. On the App Store this is declared as Data Not Collected.</p>
 
   <h2>In one sentence</h2>
   <p>CoreNote does not collect any of your personal data. The only network traffic is Apple's iCloud syncing your notes to your own private iCloud database, which we cannot read.</p>
@@ -41,13 +41,13 @@
   <p>Nothing. CoreNote has no sign-up and does not gather your name, email, location, contacts, photos, or device identifiers. It embeds no analytics, advertising, or crash-reporting SDK.</p>
 
   <h2>Where your notes live</h2>
-  <p>Notes are saved in a local database inside the app's sandbox on each device. If the device is signed in to iCloud, CoreNote also syncs them to the private CloudKit database in your own iCloud account, so your iPhone, iPad, and Mac signed in to the same Apple Account show the same notes. That copy is stored and protected by Apple under your Apple Account; the developer has no access to it and runs no server. If you are not signed in to iCloud, notes stay only on that device. You can turn syncing off in system Settings → [your name] → iCloud.</p>
+  <p>Notes are saved with SwiftData in a local database inside the app's sandbox on each device. If the device is signed in to iCloud, CoreNote also syncs them to the private CloudKit database in your own iCloud account (container iCloud.com.box.CoreNote), so your iPhone, iPad, and Mac signed in to the same Apple Account show the same notes. That copy is stored and protected by Apple under your Apple Account; the developer has no access to it and runs no server. If you are not signed in to iCloud, notes stay only on that device. You can turn syncing off in system Settings → [your name] → iCloud.</p>
 
   <h2>Accounts</h2>
-  <p>The Accounts page is a plain list you type yourself: an email address or phone number, and the names of the apps you registered with it. Only the names you type are stored, in the same database as your notes, and they sync through your iCloud the same way. CoreNote never stores passwords and does not use Keychain, AutoFill, or biometrics.</p>
+  <p>The Accounts page is a plain list you type yourself: an email address or phone number, and the names of the apps you registered with it. Only those names are stored, in the same SwiftData database as your notes, and they sync through your iCloud the same way. CoreNote never stores passwords and does not use Keychain, AutoFill, or biometrics.</p>
 
   <h2>Appearance preference</h2>
-  <p>The canvas color you pick is saved in the system's local preferences (UserDefaults) on each device so it is restored next time. It is not synced or uploaded.</p>
+  <p>The canvas color you pick — one of four: Amber, White, Slate, and Pine — is saved in the system's local preferences (UserDefaults) on each device so it is restored next time. It is not synced or uploaded.</p>
 
   <h2>Third parties</h2>
   <p>No third-party analytics, advertising, sign-in, or social SDKs are included. Syncing uses only Apple's iCloud (CloudKit). Your notes are not shared with anyone.</p>
@@ -66,16 +66,16 @@
   <p>If our practices change, we will update this page and the effective date.</p>
 
   <h2>Contact</h2>
-  <p>Privacy questions: <a href="mailto:iosdevbox@proton.me">iosdevbox@proton.me</a></p>
+  <p>Privacy questions: <a href="mailto:qianluoxue@188.com">qianluoxue@188.com</a></p>
   </section>
 
   <hr>
 
   <section id="zh-hans" lang="zh-Hans">
   <h1>CoreNote 隐私政策</h1>
-  <p class="meta">生效日期：2026 年 10 月 28 日<br>开发者：CoreNote</p>
+  <p class="meta">生效日期：2026 年 11 月 12 日<br>开发者：CoreNote</p>
 
-  <p>CoreNote 是一款笔记应用。没有账号，没有广告，也没有我们的服务器。如果你登录了 iCloud，笔记会通过你自己的 iCloud 私有数据库在你的设备之间同步，我们看不到。</p>
+  <p>CoreNote 是一款笔记应用。没有账号，没有广告，也没有我们的服务器。如果你登录了 iCloud，笔记会通过你自己的 iCloud 私有数据库在你的设备之间同步，我们看不到。在 App Store 上，这声明为 Data Not Collected（不收集数据）。</p>
 
   <h2>一句话说明</h2>
   <p>CoreNote 不收集你的任何个人数据。唯一的联网是 Apple 的 iCloud 把笔记同步到你自己的 iCloud 私有数据库，我们无法读取。</p>
@@ -84,13 +84,13 @@
   <p>不收集。CoreNote 不要求注册，不采集姓名、邮箱、位置、通讯录、照片或设备标识符，不接入任何统计、广告或崩溃上报 SDK。</p>
 
   <h2>笔记存在哪里</h2>
-  <p>笔记保存在每台设备上应用沙盒内的本地数据库中。设备登录了 iCloud 时，CoreNote 还会把笔记同步到你自己 iCloud 账户里的 CloudKit 私有数据库，登录同一个 Apple 账户的 iPhone、iPad 和 Mac 会显示相同的笔记。这份副本由 Apple 在你的 Apple 账户下存储和保护，开发者无法访问，也不运营任何服务器。没有登录 iCloud 时，笔记只留在这台设备上。可在系统「设置 → 你的名字 → iCloud」中关闭同步。</p>
+  <p>笔记用 SwiftData 保存在每台设备上应用沙盒内的本地数据库中。设备登录了 iCloud 时，CoreNote 还会把笔记同步到你自己 iCloud 账户里的 CloudKit 私有数据库（容器 iCloud.com.box.CoreNote），登录同一个 Apple 账户的 iPhone、iPad 和 Mac 会显示相同的笔记。这份副本由 Apple 在你的 Apple 账户下存储和保护，开发者无法访问，也不运营任何服务器。没有登录 iCloud 时，笔记只留在这台设备上。可在系统「设置 → 你的名字 → iCloud」中关闭同步。</p>
 
   <h2>账户</h2>
-  <p>「账户」页是你自己填写的一张清单：一个邮箱或手机号，以及用它注册过的应用名字。只保存你输入的名字，和笔记存在同一个数据库里，并以同样方式通过你的 iCloud 同步。CoreNote 从不保存密码，也不使用钥匙串、自动填充或生物识别。</p>
+  <p>「账户」页是你自己填写的一张清单：一个邮箱或手机号，以及用它注册过的应用名字。只保存这些名字，和笔记存在同一个 SwiftData 数据库里，并以同样方式通过你的 iCloud 同步。CoreNote 从不保存密码，也不使用钥匙串、自动填充或生物识别。</p>
 
   <h2>外观偏好</h2>
-  <p>你选择的底色保存在每台设备系统的本地偏好设置（UserDefaults）中，用于下次打开时恢复，不会同步或上传。</p>
+  <p>你选择的底色（四套之一：琥珀、白色、石板、松绿）保存在每台设备系统的本地偏好设置（UserDefaults）中，用于下次打开时恢复，不会同步或上传。</p>
 
   <h2>第三方</h2>
   <p>不嵌入第三方统计、广告、登录或社交 SDK。同步只使用 Apple 的 iCloud（CloudKit），不会与任何人共享你的笔记。</p>
@@ -109,16 +109,16 @@
   <p>若做法发生变化，我们会更新本页并修改生效日期。</p>
 
   <h2>联系我们</h2>
-  <p>隐私相关问题请发信至：<a href="mailto:iosdevbox@proton.me">iosdevbox@proton.me</a></p>
+  <p>隐私相关问题请发信至：<a href="mailto:qianluoxue@188.com">qianluoxue@188.com</a></p>
   </section>
 
   <hr>
 
   <section id="zh-hant" lang="zh-Hant">
   <h1>CoreNote 隱私權政策</h1>
-  <p class="meta">生效日期：2026 年 10 月 28 日<br>開發者：CoreNote</p>
+  <p class="meta">生效日期：2026 年 11 月 12 日<br>開發者：CoreNote</p>
 
-  <p>CoreNote 是一款筆記 App。沒有帳號，沒有廣告，也沒有我們的伺服器。如果你登入了 iCloud，筆記會透過你自己的 iCloud 私人資料庫在你的裝置之間同步，我們看不到。</p>
+  <p>CoreNote 是一款筆記 App。沒有帳號，沒有廣告，也沒有我們的伺服器。如果你登入了 iCloud，筆記會透過你自己的 iCloud 私人資料庫在你的裝置之間同步，我們看不到。在 App Store 上，這聲明為 Data Not Collected（不收集資料）。</p>
 
   <h2>一句話說明</h2>
   <p>CoreNote 不收集你的任何個人資料。唯一的連網是 Apple 的 iCloud 把筆記同步到你自己的 iCloud 私人資料庫，我們無法讀取。</p>
@@ -127,13 +127,13 @@
   <p>不收集。CoreNote 不需要註冊，不蒐集姓名、電子郵件、位置、聯絡人、照片或裝置識別碼，不內建任何統計、廣告或當機回報 SDK。</p>
 
   <h2>筆記存在哪裡</h2>
-  <p>筆記儲存在每台裝置上 App 沙盒內的本地資料庫。裝置登入了 iCloud 時，CoreNote 也會把筆記同步到你自己 iCloud 帳號裡的 CloudKit 私人資料庫，登入同一個 Apple 帳號的 iPhone、iPad 和 Mac 會顯示相同的筆記。這份副本由 Apple 在你的 Apple 帳號下儲存和保護，開發者無法存取，也不營運任何伺服器。沒有登入 iCloud 時，筆記只留在這台裝置上。可在系統「設定 → 你的名字 → iCloud」中關閉同步。</p>
+  <p>筆記用 SwiftData 儲存在每台裝置上 App 沙盒內的本地資料庫。裝置登入了 iCloud 時，CoreNote 也會把筆記同步到你自己 iCloud 帳號裡的 CloudKit 私人資料庫（容器 iCloud.com.box.CoreNote），登入同一個 Apple 帳號的 iPhone、iPad 和 Mac 會顯示相同的筆記。這份副本由 Apple 在你的 Apple 帳號下儲存和保護，開發者無法存取，也不營運任何伺服器。沒有登入 iCloud 時，筆記只留在這台裝置上。可在系統「設定 → 你的名字 → iCloud」中關閉同步。</p>
 
   <h2>帳號</h2>
-  <p>「帳號」頁是你自己填寫的一張清單：一個電子郵件或手機號碼，以及用它註冊過的 App 名稱。只儲存你輸入的名稱，和筆記存在同一個資料庫裡，並以同樣方式透過你的 iCloud 同步。CoreNote 從不儲存密碼，也不使用鑰匙圈、自動填寫或生物辨識。</p>
+  <p>「帳號」頁是你自己填寫的一張清單：一個電子郵件或手機號碼，以及用它註冊過的 App 名稱。只儲存這些名稱，和筆記存在同一個 SwiftData 資料庫裡，並以同樣方式透過你的 iCloud 同步。CoreNote 從不儲存密碼，也不使用鑰匙圈、自動填寫或生物辨識。</p>
 
   <h2>外觀偏好</h2>
-  <p>你選擇的底色儲存在每台裝置系統的本地偏好設定（UserDefaults）中，用於下次開啟時復原，不會同步或上傳。</p>
+  <p>你選擇的底色（四套之一：琥珀、白色、石板、松綠）儲存在每台裝置系統的本地偏好設定（UserDefaults）中，用於下次開啟時復原，不會同步或上傳。</p>
 
   <h2>第三方</h2>
   <p>不內嵌第三方統計、廣告、登入或社群 SDK。同步只使用 Apple 的 iCloud（CloudKit），不會與任何人分享你的筆記。</p>
@@ -152,7 +152,7 @@
   <p>若做法有所變動，我們會更新本頁並修改生效日期。</p>
 
   <h2>聯絡我們</h2>
-  <p>隱私權相關問題請寄至：<a href="mailto:iosdevbox@proton.me">iosdevbox@proton.me</a></p>
+  <p>隱私權相關問題請寄至：<a href="mailto:qianluoxue@188.com">qianluoxue@188.com</a></p>
   </section>
 </body>
 </html>

@@ -10,7 +10,7 @@
       max-width: 40rem;
       margin: 2.5rem auto;
       padding: 0 1.25rem 4rem;
-      font: 17px/1.7 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif;
+      font: 17px/1.7 -apple-system, BlinkMacSystemFont, "PingFang SC", "PingFang TC", "Hiragino Sans GB", sans-serif;
       color: #1d1d1f;
     }
     @media (prefers-color-scheme: dark) {
@@ -22,43 +22,55 @@
     .meta { color: #6e6e73; font-size: 0.9rem; }
     ul { padding-left: 1.2rem; }
     hr { margin: 3rem 0; border: 0; border-top: 1px solid #d2d2d7; }
+    nav a { margin-right: 1rem; }
   </style>
 </head>
 <body>
+  <nav class="meta"><a href="#en">English</a><a href="#zh-hans">简体中文</a><a href="#zh-hant">繁體中文</a></nav>
+
+  <section id="en">
   <h1>Lumen Mail Privacy Policy</h1>
-  <p class="meta">Effective date: September 11, 2026<br>Developer: Lumen Mail</p>
+  <p class="meta">Effective date: November 12, 2026<br>Developer: Lumen Mail</p>
 
   <p>Lumen is a mail client that runs entirely on your device. Our principle is simple: <strong>your mail is yours. We can't see it, and we don't want to.</strong></p>
 
   <h2>In one sentence</h2>
-  <p>Lumen does not collect, store, or transmit any of your personal data. There is no account system, no analytics, no advertising, and no third-party SDK.</p>
+  <p>Lumen does not collect, store, or transmit any of your personal data. There is no account system of ours, no analytics, no advertising, and no third-party SDK.</p>
 
   <h2>Where your mail goes</h2>
-  <p>Lumen connects directly from your device to your mail provider (for iCloud, <code>imap.mail.me.com</code> and <code>smtp.mail.me.com</code>) over encrypted connections to receive and send mail.</p>
+  <p>Lumen connects directly from your device to your mail provider over encrypted connections to receive and send mail. For iCloud that is <code>imap.mail.me.com</code> and <code>smtp.mail.me.com</code>. For NetEase Mail (163, 126, yeah.net, and 188) it is that domain's own <code>imap</code> and <code>smtp</code> host. NetEase requires the app to state its name before opening the mailbox; that notice does not include your messages.</p>
   <p><strong>We have no servers.</strong> Your mail never passes through any relay server belonging to Lumen, because no such server exists. This differs from some mail apps that hand your credentials to their own servers, which fetch your mail on your behalf and push it to you. Lumen does not do this.</p>
 
   <h2>Where your password is kept</h2>
-  <p>Your app-specific password is stored in the device's system Keychain, encrypted by the operating system. It:</p>
+  <p>Lumen can keep more than one mailbox (Settings → Add Account). Your sign-in secret for each one — an app-specific password for iCloud, or an authorization code for NetEase — is stored in the device's system Keychain, encrypted by the operating system. Each secret:</p>
   <ul>
     <li>stays on this device only; it is not synced to other devices or uploaded anywhere</li>
     <li>is used solely to authenticate with your mail provider</li>
-    <li>is permanently deleted from the Keychain when you sign out</li>
+    <li>is permanently deleted from the Keychain, together with that account's local cache, when you sign out of that account. Other accounts you have added stay</li>
   </ul>
 
   <h2>Local cache</h2>
-  <p>So the app opens with content ready to read, Lumen keeps recent messages in the app's sandboxed storage on your device. This cache:</p>
+  <p>So the app opens with content ready to read, Lumen keeps recent messages in the app's sandboxed storage on your device, separately for each mailbox. This cache:</p>
   <ul>
     <li>exists only on your device</li>
     <li>is protected by the system sandbox and cannot be read by other apps</li>
-    <li>is deleted when you sign out</li>
+    <li>is deleted for that mailbox when you sign out of that account</li>
     <li>disappears when you delete the app</li>
   </ul>
+
+  <h2>Company logos</h2>
+  <p>When a message is from a company, Lumen may download that company's public website icon so the avatar can show their logo instead of a letter. The request goes directly from your device to that company's website. It includes no message content and no copy of your mailbox, and it does not pass through us. The icon is cached on this device only. Personal mailboxes such as iCloud, Gmail, and NetEase Mail keep the letter avatar; we do not ask those sites for a logo.</p>
+
+  <h2>Images in a message</h2>
+  <p>Pictures included in the message are shown when you open it. They are already part of the message, and opening it does not contact the sender. Pictures stored on another server are not downloaded, so the sender is not told that you opened the message. We never receive those pictures.</p>
 
   <h2>System APIs we use</h2>
   <p>As required by Apple, we declare the "required reason" APIs the app uses:</p>
   <ul>
-    <li><strong>UserDefaults</strong>: stores your preferences (signature, reader-mode default) and the signed-in email address. Used only by this app.</li>
+    <li><strong>UserDefaults</strong>: stores your preferences (signature, reader-mode default, and the Translate English into Chinese switch) and the list of mailboxes you added. Used only by this app. Passwords are not stored here.</li>
     <li><strong>File timestamps</strong>: used when reading and writing the local mail cache.</li>
+    <li><strong>Apple Intelligence (on-device)</strong>: when you tap Summary on a long message, the system language model on this device (iOS 26 / macOS 26, FoundationModels) writes a short summary. The message never leaves the device; we have no cloud AI and no server that could receive it. The summary is stored only in the local mail cache.</li>
+    <li><strong>Translation (on-device)</strong>: when you turn on “Translate English into Chinese”, Apple’s built-in Translation framework (iOS 18+ / macOS 15+) translates the subject and body on this device. The message does not leave the device and does not pass through any server of ours or any third-party cloud.</li>
   </ul>
 
   <h2>What we don't do</h2>
@@ -77,54 +89,91 @@
   <p>If this policy changes, we will update this page and the effective date above. Because Lumen's architecture gives us no access to your data, no change can weaken the guarantees described here.</p>
 
   <h2>Contact</h2>
-  <p>Questions about privacy: <a href="mailto:iosdevbox@proton.me">iosdevbox@proton.me</a></p>
+  <p>Questions about privacy: <a href="mailto:qianluoxue@188.com">qianluoxue@188.com</a></p>
+  </section>
 
   <hr>
 
-  <h1 lang="zh-Hans">Lumen Mail 隐私政策</h1>
-  <p class="meta" lang="zh-Hans">生效日期：2026 年 9 月 11 日<br>开发者：Lumen Mail</p>
-  <div lang="zh-Hans">
-    <p>Lumen 是一款完全在你设备上运行的邮件客户端。原则很简单：<strong>你的邮件是你的，我们看不到，也不想看到。</strong></p>
-    <h2>一句话总结</h2>
-    <p>Lumen 不收集、不存储、不传输你的任何个人数据。没有账号系统，没有分析统计，没有广告，没有第三方 SDK。</p>
-    <h2>你的邮件去了哪里</h2>
-    <p>Lumen 直接从你的设备通过加密连接连到你的邮件服务商（iCloud 为 <code>imap.mail.me.com</code> 与 <code>smtp.mail.me.com</code>）收发邮件。<strong>我们没有服务器。</strong>你的邮件不会经过任何属于 Lumen 的中转服务器——因为它不存在。</p>
-    <h2>你的密码存在哪里</h2>
-    <p>App 专用密码保存在设备的系统钥匙串中，由操作系统加密。它仅保存在本机、不同步、不上传；仅用于向邮件服务商证明身份；退出登录时彻底删除。</p>
-    <h2>本地缓存</h2>
-    <p>为了打开即可阅读，Lumen 会把最近的邮件保存在应用沙盒内。缓存仅存于本机、其他 App 无法读取、退出登录时删除、随卸载一并消失。</p>
-    <h2>我们使用的系统接口</h2>
-    <p><strong>UserDefaults</strong>：保存偏好设置与登录邮箱地址。<strong>文件时间戳</strong>：读写本地缓存时使用。</p>
-    <h2>我们不做的事</h2>
-    <p>不收集任何个人信息或使用数据；不追踪；不集成分析、崩溃统计或广告 SDK；不与任何第三方共享数据；不申请与邮件无关的系统权限。</p>
-    <h2>儿童隐私</h2>
-    <p>Lumen 不收集任何人的数据，因此也不收集儿童的数据。</p>
-    <h2>联系我们</h2>
-    <p>对隐私有任何疑问，请发信至：<a href="mailto:iosdevbox@proton.me">iosdevbox@proton.me</a></p>
-  </div>
+  <section id="zh-hans" lang="zh-Hans">
+  <h1>Lumen Mail 隐私政策</h1>
+  <p class="meta">生效日期：2026 年 11 月 12 日<br>开发者：Lumen Mail</p>
+
+  <p>Lumen 是一款完全在你设备上运行的邮件客户端。原则很简单：<strong>你的邮件是你的，我们看不到，也不想看到。</strong></p>
+
+  <h2>一句话总结</h2>
+  <p>Lumen 不收集、不存储、不传输你的任何个人数据。没有我们自己的账号系统，没有分析统计，没有广告，没有第三方 SDK。</p>
+
+  <h2>你的邮件去了哪里</h2>
+  <p>Lumen 直接从你的设备通过加密连接连到你的邮件服务商收发邮件。iCloud 是 <code>imap.mail.me.com</code> 与 <code>smtp.mail.me.com</code>；网易邮箱（163、126、yeah.net、188）是该域名自己的 <code>imap</code> 与 <code>smtp</code> 主机。网易要求 App 在打开邮箱前报上自己的名字，这条说明不含你的邮件内容。<strong>我们没有服务器。</strong>你的邮件不会经过任何属于 Lumen 的中转服务器——因为它不存在。这和某些把凭据交给自己服务器、再由服务器代收代发的邮件应用不同。Lumen 不这样做。</p>
+
+  <h2>你的密码存在哪里</h2>
+  <p>Lumen 可以保存多个邮箱（设置 → 添加账号 / Add Account）。每个邮箱的登录凭证（iCloud 的 App 专用密码，或网易的授权码）保存在设备的系统钥匙串中，由操作系统加密。它仅保存在本机、不同步、不上传；仅用于向邮件服务商证明身份；退出该账号时，从钥匙串与该账号的本地缓存中彻底删除，其他已添加的账号保留。</p>
+
+  <h2>本地缓存</h2>
+  <p>为了打开即可阅读，Lumen 会把每个邮箱最近的邮件分别保存在应用沙盒内。缓存仅存于本机、其他 App 无法读取、退出该账号时删除该账号的缓存、随卸载一并消失。</p>
+
+  <h2>公司标志</h2>
+  <p>公司发来的信，Lumen 可能会向该公司的网站下载公开图标，用来在头像处显示他们的标志，而不是一个字母。这个请求从你的设备直接发到对方网站，不含邮件内容，也不经过我们。图标只缓存在本机。iCloud、Gmail、网易邮箱这类个人信箱仍用字母头像，不会去向这些网站要标志。</p>
+
+  <h2>信里的图片</h2>
+  <p>随信一起发来的图片会直接显示。它们本来就在这封信里，打开时不会再去联系发件人。放在别的服务器上的图片不下载，所以发件人不会因为你打开这封信而知道。我们收不到那些图片。</p>
+
+  <h2>我们使用的系统接口</h2>
+  <p><strong>UserDefaults</strong>：保存偏好设置（签名、默认净读、是否把英文译成简体中文）以及已添加的邮箱列表，不含密码。<strong>文件时间戳</strong>：读写本地缓存时使用。<strong>Apple Intelligence（端上）</strong>：你在长邮件上点「摘要」时，由本机系统语言模型（iOS 26 / macOS 26 的 FoundationModels）生成短摘要。邮件内容不离开设备；我们没有云端 AI，也没有能接收它的服务器。摘要只存在本地邮件缓存里。<strong>Translation（端上）</strong>：开启「把英文译成简体中文（Translate English into Chinese）」时，使用 Apple 系统自带的端上 Translation 框架（iOS 18+ / macOS 15+）在本机完成翻译。邮件正文与主题不离开设备，不经过任何自有或第三方云端服务器。</p>
+
+  <h2>我们不做的事</h2>
+  <p>不收集任何个人信息或使用数据；不追踪；不集成分析、崩溃统计或广告 SDK；不与任何第三方共享数据；不申请与邮件无关的系统权限。</p>
+
+  <h2>儿童隐私</h2>
+  <p>Lumen 不收集任何人的数据，因此也不收集儿童的数据。</p>
+
+  <h2>政策更新</h2>
+  <p>若本政策发生变化，我们会更新本页并修改上方的生效日期。Lumen 的构造使我们接触不到你的数据，因此任何变更都不会削弱这里写明的保证。</p>
+
+  <h2>联系我们</h2>
+  <p>对隐私有任何疑问，请发信至：<a href="mailto:qianluoxue@188.com">qianluoxue@188.com</a></p>
+  </section>
 
   <hr>
 
-  <h1 lang="zh-Hant">Lumen Mail 隱私權政策</h1>
-  <p class="meta" lang="zh-Hant">生效日期：2026 年 9 月 11 日<br>開發者：Lumen Mail</p>
-  <div lang="zh-Hant">
-    <p>Lumen 是一款完全在你裝置上執行的郵件客戶端。原則很簡單：<strong>你的郵件是你的，我們看不到，也不想看到。</strong></p>
-    <h2>一句話總結</h2>
-    <p>Lumen 不收集、不儲存、不傳輸你的任何個人資料。沒有帳號系統，沒有分析統計，沒有廣告，沒有第三方 SDK。</p>
-    <h2>你的郵件去了哪裡</h2>
-    <p>Lumen 直接從你的裝置透過加密連線連到你的郵件服務商（iCloud 為 <code>imap.mail.me.com</code> 與 <code>smtp.mail.me.com</code>）收發郵件。<strong>我們沒有伺服器。</strong>你的郵件不會經過任何屬於 Lumen 的中繼伺服器——因為它不存在。</p>
-    <h2>你的密碼存在哪裡</h2>
-    <p>App 專用密碼保存在裝置的系統鑰匙圈中，由作業系統加密。它僅保存在本機、不同步、不上傳；僅用於向郵件服務商證明身分；登出時徹底刪除。</p>
-    <h2>本地快取</h2>
-    <p>為了開啟即可閱讀，Lumen 會把最近的郵件保存在應用程式沙箱內。快取僅存於本機、其他 App 無法讀取、登出時刪除、隨解除安裝一併消失。</p>
-    <h2>我們使用的系統介面</h2>
-    <p><strong>UserDefaults</strong>：保存偏好設定與登入的電子郵件地址。<strong>檔案時間戳記</strong>：讀寫本地快取時使用。</p>
-    <h2>我們不做的事</h2>
-    <p>不收集任何個人資訊或使用資料；不追蹤；不整合分析、當機統計或廣告 SDK；不與任何第三方分享資料；不要求與郵件無關的系統權限。</p>
-    <h2>兒童隱私</h2>
-    <p>Lumen 不收集任何人的資料，因此也不收集兒童的資料。</p>
-    <h2>聯絡我們</h2>
-    <p>對隱私有任何疑問，請寄信至：<a href="mailto:iosdevbox@proton.me">iosdevbox@proton.me</a></p>
-  </div>
+  <section id="zh-hant" lang="zh-Hant">
+  <h1>Lumen Mail 隱私權政策</h1>
+  <p class="meta">生效日期：2026 年 11 月 12 日<br>開發者：Lumen Mail</p>
+
+  <p>Lumen 是一款完全在你裝置上執行的郵件客戶端。原則很簡單：<strong>你的郵件是你的，我們看不到，也不想看到。</strong></p>
+
+  <h2>一句話總結</h2>
+  <p>Lumen 不收集、不儲存、不傳輸你的任何個人資料。沒有我們自己的帳號系統，沒有分析統計，沒有廣告，沒有第三方 SDK。</p>
+
+  <h2>你的郵件去了哪裡</h2>
+  <p>Lumen 直接從你的裝置透過加密連線連到你的郵件服務商收發郵件。iCloud 是 <code>imap.mail.me.com</code> 與 <code>smtp.mail.me.com</code>；網易信箱（163、126、yeah.net、188）是該網域自己的 <code>imap</code> 與 <code>smtp</code> 主機。網易要求 App 在開啟信箱前報上自己的名字，這則說明不含你的郵件內容。<strong>我們沒有伺服器。</strong>你的郵件不會經過任何屬於 Lumen 的中繼伺服器——因為它不存在。這和某些把憑證交給自己伺服器、再由伺服器代收代發的郵件應用程式不同。Lumen 不這樣做。</p>
+
+  <h2>你的密碼存在哪裡</h2>
+  <p>Lumen 可以保存多個信箱（設定 → 新增帳號 / Add Account）。每個信箱的登入憑證（iCloud 的 App 專用密碼，或網易的授權碼）保存在裝置的系統鑰匙圈中，由作業系統加密。它僅保存在本機、不同步、不上傳；僅用於向郵件服務商證明身分；登出該帳號時，從鑰匙圈與該帳號的本地快取中徹底刪除，其他已新增的帳號保留。</p>
+
+  <h2>本地快取</h2>
+  <p>為了開啟即可閱讀，Lumen 會把每個信箱最近的郵件分別保存在應用程式沙箱內。快取僅存於本機、其他 App 無法讀取、登出該帳號時刪除該帳號的快取、隨解除安裝一併消失。</p>
+
+  <h2>公司標誌</h2>
+  <p>公司寄來的信，Lumen 可能會向該公司的網站下載公開圖示，用來在頭像處顯示他們的標誌，而不是一個字母。這個請求從你的裝置直接發到對方網站，不含郵件內容，也不經過我們。圖示只快取在本機。iCloud、Gmail、網易信箱這類個人信箱仍用字母頭像，不會去向這些網站要標誌。</p>
+
+  <h2>信裡的圖片</h2>
+  <p>隨信一起寄來的圖片會直接顯示。它們本來就在這封信裡，打開時不會再去聯繫寄件人。放在別的伺服器上的圖片不下載，所以寄件人不會因為你打開這封信而知道。我們收不到那些圖片。</p>
+
+  <h2>我們使用的系統介面</h2>
+  <p><strong>UserDefaults</strong>：保存偏好設定（簽名、預設淨讀、是否把英文譯成簡體中文）以及已新增的信箱清單，不含密碼。<strong>檔案時間戳記</strong>：讀寫本地快取時使用。<strong>Apple Intelligence（端上）</strong>：你在長郵件上點「摘要」時，由本機系統語言模型（iOS 26 / macOS 26 的 FoundationModels）產生短摘要。郵件內容不離開裝置；我們沒有雲端 AI，也沒有能接收它的伺服器。摘要只存在本地郵件快取裡。<strong>Translation（端上）</strong>：開啟「把英文譯成簡體中文（Translate English into Chinese）」時，使用 Apple 系統自帶的端上 Translation 框架（iOS 18+ / macOS 15+）在本機完成翻譯。郵件正文與主題不離開裝置，不經過任何自有或第三方雲端伺服器。</p>
+
+  <h2>我們不做的事</h2>
+  <p>不收集任何個人資訊或使用資料；不追蹤；不整合分析、當機統計或廣告 SDK；不與任何第三方分享資料；不要求與郵件無關的系統權限。</p>
+
+  <h2>兒童隱私</h2>
+  <p>Lumen 不收集任何人的資料，因此也不收集兒童的資料。</p>
+
+  <h2>政策更新</h2>
+  <p>若本政策有所變動，我們會更新本頁並修改上方的生效日期。Lumen 的構造使我們接觸不到你的資料，因此任何變更都不會削弱這裡寫明的保證。</p>
+
+  <h2>聯絡我們</h2>
+  <p>對隱私有任何疑問，請寄信至：<a href="mailto:qianluoxue@188.com">qianluoxue@188.com</a></p>
+  </section>
 </body>
 </html>
