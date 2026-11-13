@@ -26,39 +26,44 @@
 </head>
 <body>
   <h1>MindShift Privacy Policy</h1>
-  <p class="meta">Effective date: November 11, 2026<br>Developer: MindShift</p>
+  <p class="meta">Effective date: November 13, 2026<br>Developer: MindShift</p>
 
-  <p>MindShift is a mind-mapping app with no account, no advertising, and no server of ours. If you are signed in to iCloud, your maps sync between your own devices through your private iCloud database. We cannot see them.</p>
+  <p>MindShift is a mind-mapping app with no account and no advertising. Your maps stay on the device and, if you use iCloud, in your own private iCloud database. Optional Cloud AI is off until you turn it on.</p>
 
   <h2>In one sentence</h2>
-  <p>MindShift does not collect any of your personal data. The only network traffic is Apple's iCloud syncing your maps to your own private iCloud database, which we cannot read.</p>
+  <p>Map storage and sync stay on your device and in your private iCloud, which we cannot read. Cloud AI is a separate, optional feature: off by default, and only the text of a request you choose to run is forwarded, then not stored by us.</p>
 
   <h2>Where your maps live</h2>
-  <p>Maps are saved in a local database inside the app's sandbox on each device. If the device is signed in to iCloud, MindShift also syncs them to the private CloudKit database in your own iCloud account, so your iPhone, iPad, and Mac signed in to the same Apple Account show the same maps. That copy is stored and protected by Apple under your Apple Account; the developer has no access to it and runs no server. If you are not signed in to iCloud, maps stay only on that device. You can turn syncing off in system Settings → [your name] → iCloud.</p>
+  <p>Maps are saved in a local database inside the app's sandbox on each device. If the device is signed in to iCloud, MindShift also syncs them to the private CloudKit database in your own iCloud account, so your iPhone, iPad, and Mac signed in to the same Apple Account show the same maps. That copy is stored and protected by Apple under your Apple Account; the developer has no access to it. If you are not signed in to iCloud, maps stay only on that device. You can turn syncing off in system Settings → [your name] → iCloud. Turning Cloud AI on or off does not move this copy.</p>
+
+  <h2>Optional Cloud AI</h2>
+  <p>Cloud AI Strategist is off by default. Nothing from your map is sent for AI until you confirm it, either in the one-time card or in Settings. You can turn it off again at any time and return to on-device layout and on-device structure checks.</p>
+  <p>After it is on, and only when you use AI Map, AI Expand, AI Shift, the strategist bar, or a blind-spot note, MindShift sends the current outline or the text you typed, plus a random anonymous UUID created on this device. The UUID is not your Apple Account and not a hardware identifier. It exists so our gateway can limit how many requests one device makes per minute.</p>
+  <p>That request goes over HTTPS to a stateless Cloudflare Workers gateway, which forwards it to the DeepSeek API to produce a structure. The gateway does not write the content to disk, does not keep a log of it, and does not link it to an Apple Account. We do not use it for advertising or tracking.</p>
 
   <h2>What we don't do</h2>
   <ul>
-    <li>We don't collect personal information or usage data.</li>
-    <li>We don't track you in any way.</li>
+    <li>We don't require an account.</li>
+    <li>We don't track you, and we don't use the data above for tracking.</li>
     <li>We don't include analytics, crash reporting, or advertising SDKs.</li>
-    <li>We don't share your maps with anyone. Syncing uses only Apple's iCloud (CloudKit).</li>
+    <li>We don't read the maps in your private iCloud database.</li>
     <li>We don't ask for camera, microphone, location, contacts, or notification permission. iCloud may deliver a silent push so another device's changes arrive; that does not show a notification.</li>
   </ul>
 
   <h2>System APIs we use</h2>
   <p>As required by Apple, we declare the "required reason" APIs the app uses:</p>
   <ul>
-    <li><strong>UserDefaults</strong>: the system stores interface state such as window and sidebar sizes. Used only by this app, on this device.</li>
+    <li><strong>UserDefaults</strong>: the system stores interface state such as window and sidebar sizes, the Cloud AI on/off choice, and the random rate-limit UUID. Used only by this app, on this device.</li>
   </ul>
 
   <h2>Deleting your data</h2>
-  <p>Deleting a map inside the app removes it from this device and, when iCloud sync is on, from your other devices. Uninstalling the app removes the maps on that device. Copies already synced to iCloud stay in your iCloud account; delete them in the app before uninstalling, or in system Settings → [your name] → iCloud → Manage Storage → MindShift.</p>
+  <p>Deleting a map inside the app removes it from this device and, when iCloud sync is on, from your other devices. Uninstalling the app removes the maps on that device. Copies already synced to iCloud stay in your iCloud account; delete them in the app before uninstalling, or in system Settings → [your name] → iCloud → Manage Storage → MindShift. Turning Cloud AI off stops further requests. The gateway does not keep a copy to delete.</p>
 
   <h2>Children</h2>
-  <p>MindShift collects no data from anyone, so it collects no data from children.</p>
+  <p>MindShift is not directed at children under 13. We do not knowingly collect their personal information. If Cloud AI is used, the text of that request is processed to generate a map and is not stored by us.</p>
 
   <h2>Changes</h2>
-  <p>If this policy changes, we will update this page and the effective date above. Because your maps stay in your iCloud and on your devices, no change can give us access to them.</p>
+  <p>If this policy changes, we will update this page and the effective date above. Changes to Cloud AI do not give us access to the maps stored in your iCloud.</p>
 
   <h2>Contact</h2>
   <p>Questions about privacy: <a href="mailto:qianluoxue@188.com">qianluoxue@188.com</a></p>
@@ -66,23 +71,27 @@
   <hr>
 
   <h1 lang="zh-Hans">MindShift 隐私政策</h1>
-  <p class="meta" lang="zh-Hans">生效日期：2026 年 11 月 11 日<br>开发者：MindShift</p>
+  <p class="meta" lang="zh-Hans">生效日期：2026 年 11 月 13 日<br>开发者：MindShift</p>
   <div lang="zh-Hans">
-    <p>MindShift 是一款思维导图应用。没有账号，没有广告，也没有我们的服务器。如果你登录了 iCloud，导图会通过你自己的 iCloud 私有数据库在你的设备之间同步，我们看不到。</p>
+    <p>MindShift 是一款思维导图应用。没有账号，没有广告。导图存在设备本地；如果你使用 iCloud，还会进入你自己的 iCloud 私有库。可选的云端 AI 默认关闭，需要你确认后才开启。</p>
     <h2>一句话总结</h2>
-    <p>MindShift 不收集你的任何个人数据。唯一的联网是 Apple 的 iCloud 把导图同步到你自己的 iCloud 私有数据库，我们无法读取。</p>
+    <p>导图的存储和同步仍在你的设备和你的 iCloud 私有库里，我们读不到。云端 AI 是另一件可选的事：默认关闭，只有你主动发起的那一次请求文本会被转发，我们不保存。</p>
     <h2>你的导图存在哪里</h2>
-    <p>导图保存在每台设备上应用沙盒内的本地数据库中。设备登录了 iCloud 时，MindShift 还会把导图同步到你自己 iCloud 账户里的 CloudKit 私有数据库，登录同一个 Apple 账户的 iPhone、iPad 和 Mac 会显示相同的导图。这份副本由 Apple 在你的 Apple 账户下存储和保护，开发者无法访问，也不运营任何服务器。没有登录 iCloud 时，导图只留在这台设备上。可在系统「设置 → 你的名字 → iCloud」中关闭同步。</p>
+    <p>导图保存在每台设备上应用沙盒内的本地数据库中。设备登录了 iCloud 时，MindShift 还会把导图同步到你自己 iCloud 账户里的 CloudKit 私有数据库，登录同一个 Apple 账户的 iPhone、iPad 和 Mac 会显示相同的导图。这份副本由 Apple 在你的 Apple 账户下存储和保护，开发者无法访问。没有登录 iCloud 时，导图只留在这台设备上。可在系统「设置 → 你的名字 → iCloud」中关闭同步。开关云端 AI 不会搬走这份副本。</p>
+    <h2>可选的云端 AI 军师</h2>
+    <p>云端 AI 军师默认关闭。在你于一次性确认卡或「设置」里开启之前，不会为了 AI 发送任何导图内容。你可以随时再关掉，回到纯本机布局和本地结构检查。</p>
+    <p>开启之后，只有在你使用 AI 成图、深挖、换视角、底栏改图或盲区挑刺时，MindShift 才会发送当前导图大纲或你输入的文字，以及一个在本机随机生成的匿名 UUID。这个 UUID 不是你的 Apple 账户，也不是硬件标识。它只用来让网关按分钟限制同一台设备的请求次数。</p>
+    <p>请求经 HTTPS 送到无状态的 Cloudflare Workers 网关，再转发到 DeepSeek API 以生成结构建议。网关不把内容落盘、不记内容日志、不关联 Apple 账户。我们不用它做广告或追踪。</p>
     <h2>我们不做的事</h2>
-    <p>不收集任何个人信息或使用数据；不追踪；不集成分析、崩溃统计或广告 SDK；不与任何人共享你的导图，同步只使用 Apple 的 iCloud（CloudKit）。不申请相机、麦克风、位置、通讯录或通知权限。iCloud 可能会发一条静默推送，让另一台设备上的改动过来；这不会弹出通知。</p>
+    <p>不要求账号；不追踪，也不把上面的数据用于追踪；不集成分析、崩溃统计或广告 SDK；不读取你 iCloud 私有库里的导图。不申请相机、麦克风、位置、通讯录或通知权限。iCloud 可能会发一条静默推送，让另一台设备上的改动过来；这不会弹出通知。</p>
     <h2>我们使用的系统接口</h2>
-    <p><strong>UserDefaults</strong>：系统用它保存窗口与侧栏尺寸等界面状态，仅本应用、仅本机使用。</p>
+    <p><strong>UserDefaults</strong>：系统用它保存窗口与侧栏尺寸等界面状态、云端 AI 的开关，以及随机的限流 UUID。仅本应用、仅本机使用。</p>
     <h2>删除你的数据</h2>
-    <p>在应用内删除一张导图，会从这台设备删除；开启了 iCloud 同步时，也会从你的其他设备删除。卸载应用会删除这台设备上的导图。已同步到 iCloud 的副本仍保留在你的 iCloud 中；可在卸载前于应用内删除，或在系统「设置 → 你的名字 → iCloud → 管理储存空间 → MindShift」中删除。</p>
+    <p>在应用内删除一张导图，会从这台设备删除；开启了 iCloud 同步时，也会从你的其他设备删除。卸载应用会删除这台设备上的导图。已同步到 iCloud 的副本仍保留在你的 iCloud 中；可在卸载前于应用内删除，或在系统「设置 → 你的名字 → iCloud → 管理储存空间 → MindShift」中删除。关闭云端 AI 后不再发送新的请求。网关没有留下可删除的副本。</p>
     <h2>儿童隐私</h2>
-    <p>MindShift 不收集任何人的数据，因此也不收集儿童的数据。</p>
+    <p>MindShift 不面向 13 岁以下儿童。我们不会故意收集他们的个人信息。若使用了云端 AI，该次请求的文字只用于生成导图，我们不保存。</p>
     <h2>政策变更</h2>
-    <p>若本政策有调整，我们会更新本页与顶部的生效日期。导图只在你的设备和你的 iCloud 里，任何调整都不会让我们接触到它们。</p>
+    <p>若本政策有调整，我们会更新本页与顶部的生效日期。对云端 AI 的调整不会让我们接触到你 iCloud 里的导图。</p>
     <h2>联系我们</h2>
     <p>对隐私有任何疑问，请发信至：<a href="mailto:qianluoxue@188.com">qianluoxue@188.com</a></p>
   </div>
@@ -90,23 +99,27 @@
   <hr>
 
   <h1 lang="zh-Hant">MindShift 隱私權政策</h1>
-  <p class="meta" lang="zh-Hant">生效日期：2026 年 11 月 11 日<br>開發者：MindShift</p>
+  <p class="meta" lang="zh-Hant">生效日期：2026 年 11 月 13 日<br>開發者：MindShift</p>
   <div lang="zh-Hant">
-    <p>MindShift 是一款心智圖應用程式。沒有帳號，沒有廣告，也沒有我們的伺服器。如果你登入了 iCloud，心智圖會透過你自己的 iCloud 私人資料庫在你的裝置之間同步，我們看不到。</p>
+    <p>MindShift 是一款心智圖應用程式。沒有帳號，沒有廣告。心智圖存在裝置本地；如果你使用 iCloud，還會進入你自己的 iCloud 私人資料庫。可選的雲端 AI 預設關閉，需要你確認後才開啟。</p>
     <h2>一句話總結</h2>
-    <p>MindShift 不收集你的任何個人資料。唯一的連網是 Apple 的 iCloud 把心智圖同步到你自己的 iCloud 私人資料庫，我們無法讀取。</p>
+    <p>心智圖的儲存和同步仍在你的裝置和你的 iCloud 私人資料庫裡，我們讀不到。雲端 AI 是另一件可選的事：預設關閉，只有你主動發起的那一次請求文字會被轉送，我們不保存。</p>
     <h2>你的心智圖存在哪裡</h2>
-    <p>心智圖儲存在每台裝置上應用程式沙盒內的本地資料庫。裝置登入了 iCloud 時，MindShift 也會把心智圖同步到你自己 iCloud 帳號裡的 CloudKit 私人資料庫，登入同一個 Apple 帳號的 iPhone、iPad 和 Mac 會顯示相同的心智圖。這份副本由 Apple 在你的 Apple 帳號下儲存和保護，開發者無法存取，也不營運任何伺服器。沒有登入 iCloud 時，心智圖只留在這部裝置上。可在系統「設定 → 你的名字 → iCloud」中關閉同步。</p>
+    <p>心智圖儲存在每台裝置上應用程式沙盒內的本地資料庫。裝置登入了 iCloud 時，MindShift 也會把心智圖同步到你自己 iCloud 帳號裡的 CloudKit 私人資料庫，登入同一個 Apple 帳號的 iPhone、iPad 和 Mac 會顯示相同的心智圖。這份副本由 Apple 在你的 Apple 帳號下儲存和保護，開發者無法存取。沒有登入 iCloud 時，心智圖只留在這部裝置上。可在系統「設定 → 你的名字 → iCloud」中關閉同步。開關雲端 AI 不會搬走這份副本。</p>
+    <h2>可選的雲端 AI 軍師</h2>
+    <p>雲端 AI 軍師預設關閉。在你於一次性確認卡或「設定」裡開啟之前，不會為了 AI 傳送任何心智圖內容。你可以隨時再關掉，回到純本機版面和本地結構檢查。</p>
+    <p>開啟之後，只有在你使用 AI 成圖、深挖、換視角、底欄改圖或盲區挑刺時，MindShift 才會傳送目前心智圖大綱或你輸入的文字，以及一個在本機隨機產生的匿名 UUID。這個 UUID 不是你的 Apple 帳號，也不是硬體識別碼。它只用來讓閘道按分鐘限制同一部裝置的請求次數。</p>
+    <p>請求經 HTTPS 送到無狀態的 Cloudflare Workers 閘道，再轉送到 DeepSeek API 以產生結構建議。閘道不把內容落盤、不記內容日誌、不關聯 Apple 帳號。我們不用它做廣告或追蹤。</p>
     <h2>我們不做的事</h2>
-    <p>不收集任何個人資訊或使用資料；不追蹤；不整合分析、當機統計或廣告 SDK；不與任何人分享你的心智圖，同步只使用 Apple 的 iCloud（CloudKit）。不要求相機、麥克風、位置、聯絡人或通知權限。iCloud 可能會送出一則靜默推播，讓另一部裝置上的變更過來；這不會跳出通知。</p>
+    <p>不要求帳號；不追蹤，也不把上面的資料用於追蹤；不整合分析、當機統計或廣告 SDK；不讀取你 iCloud 私人資料庫裡的心智圖。不要求相機、麥克風、位置、聯絡人或通知權限。iCloud 可能會送出一則靜默推播，讓另一部裝置上的變更過來；這不會跳出通知。</p>
     <h2>我們使用的系統介面</h2>
-    <p><strong>UserDefaults</strong>：系統用它保存視窗與側邊欄尺寸等介面狀態，僅本應用程式、僅本機使用。</p>
+    <p><strong>UserDefaults</strong>：系統用它保存視窗與側邊欄尺寸等介面狀態、雲端 AI 的開關，以及隨機的限流 UUID。僅本應用程式、僅本機使用。</p>
     <h2>刪除你的資料</h2>
-    <p>在應用程式內刪除一張心智圖，會從這部裝置刪除；開啟了 iCloud 同步時，也會從你的其他裝置刪除。解除安裝會刪除這部裝置上的心智圖。已同步到 iCloud 的副本仍保留在你的 iCloud 中；可在解除安裝前於應用程式內刪除，或在系統「設定 → 你的名字 → iCloud → 管理儲存空間 → MindShift」中刪除。</p>
+    <p>在應用程式內刪除一張心智圖，會從這部裝置刪除；開啟了 iCloud 同步時，也會從你的其他裝置刪除。解除安裝會刪除這部裝置上的心智圖。已同步到 iCloud 的副本仍保留在你的 iCloud 中；可在解除安裝前於應用程式內刪除，或在系統「設定 → 你的名字 → iCloud → 管理儲存空間 → MindShift」中刪除。關閉雲端 AI 後不再送出新的請求。閘道沒有留下可刪除的副本。</p>
     <h2>兒童隱私</h2>
-    <p>MindShift 不收集任何人的資料，因此也不收集兒童的資料。</p>
+    <p>MindShift 不面向 13 歲以下兒童。我們不會故意收集他們的個人資訊。若使用了雲端 AI，該次請求的文字只用於產生心智圖，我們不保存。</p>
     <h2>政策變更</h2>
-    <p>若本政策有調整，我們會更新本頁與頂部的生效日期。心智圖只在你的裝置和你的 iCloud 裡，任何調整都不會讓我們接觸到它們。</p>
+    <p>若本政策有調整，我們會更新本頁與頂部的生效日期。對雲端 AI 的調整不會讓我們接觸到你 iCloud 裡的心智圖。</p>
     <h2>聯絡我們</h2>
     <p>對隱私有任何疑問，請寄信至：<a href="mailto:qianluoxue@188.com">qianluoxue@188.com</a></p>
   </div>

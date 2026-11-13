@@ -30,36 +30,41 @@
 
   <section id="en">
   <h1>CoreNote Privacy Policy</h1>
-  <p class="meta">Effective date: November 12, 2026<br>Developer: CoreNote</p>
+  <p class="meta">Effective date: November 13, 2026<br>Developer: CoreNote</p>
 
-  <p>CoreNote is a notes app with no account, no advertising, and no server of ours. If you are signed in to iCloud, your notes sync between your own devices through your private iCloud database. We cannot see them. On the App Store this is declared as Data Not Collected.</p>
+  <p>CoreNote is a notes app with no account and no advertising. Your notes and the signup list you type stay on each device and, if you are signed in to iCloud, in your own private iCloud database. The developer cannot read that copy. Cloud AI is off until you turn it on.</p>
 
   <h2>In one sentence</h2>
-  <p>CoreNote does not collect any of your personal data. The only network traffic is Apple's iCloud syncing your notes to your own private iCloud database, which we cannot read.</p>
-
-  <h2>What we collect</h2>
-  <p>Nothing. CoreNote has no sign-up and does not gather your name, email, location, contacts, photos, or device identifiers. It embeds no analytics, advertising, or crash-reporting SDK.</p>
+  <p>Notes stay on your device and in your private iCloud. Optional Cloud AI, off by default, sends only the cards you choose to ask, tidy, file, or echo through a stateless relay that does not store them.</p>
 
   <h2>Where your notes live</h2>
-  <p>Notes are saved with SwiftData in a local database inside the app's sandbox on each device. If the device is signed in to iCloud, CoreNote also syncs them to the private CloudKit database in your own iCloud account (container iCloud.com.box.CoreNote), so your iPhone, iPad, and Mac signed in to the same Apple Account show the same notes. That copy is stored and protected by Apple under your Apple Account; the developer has no access to it and runs no server. If you are not signed in to iCloud, notes stay only on that device. You can turn syncing off in system Settings → [your name] → iCloud.</p>
+  <p>Notes are saved with SwiftData in a local database inside the app's sandbox on each device. If the device is signed in to iCloud, CoreNote also syncs them to the private CloudKit database in your own iCloud account (container iCloud.com.box.CoreNote), so your iPhone, iPad, and Mac signed in to the same Apple Account show the same notes. That copy is stored and protected by Apple under your Apple Account; the developer has no access to it. If you are not signed in to iCloud, notes stay only on that device. You can turn syncing off in system Settings → [your name] → iCloud. This storage and sync behavior does not change when Cloud AI is off, and it does not change when Cloud AI is on.</p>
 
-  <h2>Accounts</h2>
-  <p>The Accounts page is a plain list you type yourself: an email address or phone number, and the names of the apps you registered with it. Only those names are stored, in the same SwiftData database as your notes, and they sync through your iCloud the same way. CoreNote never stores passwords and does not use Keychain, AutoFill, or biometrics.</p>
+  <h2>Optional Cloud AI</h2>
+  <p>Cloud AI is off by default. Nothing from your notes is sent to a model until you turn it on and then use one of these actions: ask the notebook, tidy a card, file a tossed line, or strengthen a cross-card memory echo. Only the related card text for that action is sent. It goes over HTTPS through our stateless Cloudflare relay to the DeepSeek API. The relay does not store the content and does not log it. It does not attach the text to your name, email, or Apple Account.</p>
+  <p>With each of those requests the app also sends a random UUID created on the device and kept in local preferences. It is used only to rate-limit the relay. It is not a hardware identifier, not an advertising identifier, and not linked to your identity. The UUID is not sent while Cloud AI is off. You can turn Cloud AI off at any time in the app's Settings and return to on-device filing and echoes. Rules on the device then place tossed lines and suggest related cards; those steps do not leave the device.</p>
 
-  <h2>Appearance preference</h2>
-  <p>The canvas color you pick — one of four: Amber, White, Slate, and Pine — is saved in the system's local preferences (UserDefaults) on each device so it is restored next time. It is not synced or uploaded.</p>
+  <h2>What is processed</h2>
+  <p>CoreNote has no sign-up and does not gather your name, email, location, contacts, or photos for an account. It embeds no analytics, advertising, or crash-reporting SDK. If you use Cloud AI, the card text described above is processed to provide that feature, and the random rate-limit UUID is processed for the same feature. Neither is used to track you across apps or websites. The App Store privacy label lists Other User Content and Device ID for this optional feature, not linked to you and not used for tracking.</p>
+
+  <h2>Signup list</h2>
+  <p>The signup list is text you type yourself: an email address or phone number, and the names of the apps you registered with it. Only those words are stored, in the same SwiftData database as your notes, and they sync through your iCloud the same way. CoreNote never stores passwords and does not use Keychain, AutoFill, or biometrics. That list is sent to the relay only if you have turned Cloud AI on and the action you just took needs those cards.</p>
+
+  <h2>Preferences</h2>
+  <p>The canvas color you pick — one of four: Amber, White, Slate, and Pine — and the Cloud AI switch are saved in the system's local preferences (UserDefaults) on each device. The color is not uploaded. The switch itself is not uploaded; it only decides whether the actions above may use the relay.</p>
 
   <h2>Third parties</h2>
-  <p>No third-party analytics, advertising, sign-in, or social SDKs are included. Syncing uses only Apple's iCloud (CloudKit). Your notes are not shared with anyone.</p>
+  <p>No third-party analytics, advertising, sign-in, or social SDKs are included. Syncing uses Apple's iCloud (CloudKit). When Cloud AI is on and you trigger it, the card text and the rate-limit UUID are processed by our Cloudflare relay and by the DeepSeek API. The relay does not keep a copy.</p>
 
   <h2>Children</h2>
-  <p>CoreNote is not designed for children, and collects no personal information from users of any age.</p>
+  <p>CoreNote is not designed for children. We do not knowingly collect personal information from children.</p>
 
   <h2>Your choices</h2>
   <ul>
+    <li>Leave Cloud AI off, or turn it off later in Settings. Asking, tidying, filing, and echoes then stay on the device.</li>
     <li>Delete any note in the app; deleted notes sit in Trash for 7 days and are then removed automatically. You can also empty Trash at any time.</li>
-    <li>Delete any account entry in the app.</li>
-    <li>Uninstall the app to remove the notes, accounts, and preferences on that device. Copies synced to iCloud stay in your iCloud account; delete them in the app before uninstalling, or in system Settings → [your name] → iCloud → Manage Storage → CoreNote.</li>
+    <li>Delete any signup entry in the app.</li>
+    <li>Uninstall the app to remove the notes, signup list, and preferences on that device. Copies synced to iCloud stay in your iCloud account; delete them in the app before uninstalling, or in system Settings → [your name] → iCloud → Manage Storage → CoreNote.</li>
   </ul>
 
   <h2>Changes</h2>
@@ -73,36 +78,41 @@
 
   <section id="zh-hans" lang="zh-Hans">
   <h1>CoreNote 隐私政策</h1>
-  <p class="meta">生效日期：2026 年 11 月 12 日<br>开发者：CoreNote</p>
+  <p class="meta">生效日期：2026 年 11 月 13 日<br>开发者：CoreNote</p>
 
-  <p>CoreNote 是一款笔记应用。没有账号，没有广告，也没有我们的服务器。如果你登录了 iCloud，笔记会通过你自己的 iCloud 私有数据库在你的设备之间同步，我们看不到。在 App Store 上，这声明为 Data Not Collected（不收集数据）。</p>
+  <p>CoreNote 是一款笔记应用。没有账号，没有广告。你的笔记和你写下的注册账号清单保存在每台设备上；登录了 iCloud 时，还会同步到你自己的 iCloud 私有数据库，开发者无法读取。云端 AI 默认关闭，要等你自己打开。</p>
 
   <h2>一句话说明</h2>
-  <p>CoreNote 不收集你的任何个人数据。唯一的联网是 Apple 的 iCloud 把笔记同步到你自己的 iCloud 私有数据库，我们无法读取。</p>
-
-  <h2>我们收集哪些信息</h2>
-  <p>不收集。CoreNote 不要求注册，不采集姓名、邮箱、位置、通讯录、照片或设备标识符，不接入任何统计、广告或崩溃上报 SDK。</p>
+  <p>笔记留在本机和你的 iCloud 私有库。可选的云端 AI 默认关闭；只有你开启并使用问笔记、整理、投喂或回响时，相关卡片才会经一个不存储内容的中转送出。</p>
 
   <h2>笔记存在哪里</h2>
-  <p>笔记用 SwiftData 保存在每台设备上应用沙盒内的本地数据库中。设备登录了 iCloud 时，CoreNote 还会把笔记同步到你自己 iCloud 账户里的 CloudKit 私有数据库（容器 iCloud.com.box.CoreNote），登录同一个 Apple 账户的 iPhone、iPad 和 Mac 会显示相同的笔记。这份副本由 Apple 在你的 Apple 账户下存储和保护，开发者无法访问，也不运营任何服务器。没有登录 iCloud 时，笔记只留在这台设备上。可在系统「设置 → 你的名字 → iCloud」中关闭同步。</p>
+  <p>笔记用 SwiftData 保存在每台设备上应用沙盒内的本地数据库中。设备登录了 iCloud 时，CoreNote 还会把笔记同步到你自己 iCloud 账户里的 CloudKit 私有数据库（容器 iCloud.com.box.CoreNote），登录同一个 Apple 账户的 iPhone、iPad 和 Mac 会显示相同的笔记。这份副本由 Apple 在你的 Apple 账户下存储和保护，开发者无法访问。没有登录 iCloud 时，笔记只留在这台设备上。可在系统「设置 → 你的名字 → iCloud」中关闭同步。云端 AI 关着或开着，这段存储和同步都不变。</p>
 
-  <h2>账户</h2>
-  <p>「账户」页是你自己填写的一张清单：一个邮箱或手机号，以及用它注册过的应用名字。只保存这些名字，和笔记存在同一个 SwiftData 数据库里，并以同样方式通过你的 iCloud 同步。CoreNote 从不保存密码，也不使用钥匙串、自动填充或生物识别。</p>
+  <h2>可选的云端 AI</h2>
+  <p>云端 AI 默认关闭。在你打开它，并且使用「问笔记」「一键整理」「随手投喂归位」或跨卡记忆回响增强之前，笔记不会发给模型。只有这一次动作相关的卡片文本会经 HTTPS，通过我们的无状态 Cloudflare 加密中转，发送到 DeepSeek API。中转不存储内容，也不记日志，不把文本和你的姓名、邮箱或 Apple 账户关联。</p>
+  <p>每次这类请求还会带上一个在本机生成、保存在本地偏好里的随机 UUID，只用于中转限流。它不是硬件标识符，不是广告标识符，也不关联你的身份。云端 AI 关闭时不会发送这个 UUID。你可以随时在应用的「设置」里关掉云端 AI，回到纯本机模式。之后归位和回响只走设备上的规则，不再离开这台设备。</p>
 
-  <h2>外观偏好</h2>
-  <p>你选择的底色（四套之一：琥珀、白色、石板、松绿）保存在每台设备系统的本地偏好设置（UserDefaults）中，用于下次打开时恢复，不会同步或上传。</p>
+  <h2>会处理哪些信息</h2>
+  <p>CoreNote 不要求注册，不为账号采集姓名、邮箱、位置、通讯录或照片，不接入统计、广告或崩溃上报 SDK。若你使用云端 AI，上面说的卡片文本会为这项功能被处理，随机限流 UUID 也只为这项功能被处理。两者都不用于跨 App 或跨网站追踪你。App Store 隐私标签为此可选功能列出「其他用户内容」和「设备 ID」，不关联到你，也不用于追踪。</p>
+
+  <h2>注册账号清单</h2>
+  <p>注册账号清单是你自己填写的文字：一个邮箱或手机号，以及用它注册过的应用名字。只保存这些文字，和笔记存在同一个 SwiftData 数据库里，并以同样方式通过你的 iCloud 同步。CoreNote 从不保存密码，也不使用钥匙串、自动填充或生物识别。只有在你已经打开云端 AI，且刚才的动作需要这些卡片时，这份清单才会被送到中转。</p>
+
+  <h2>偏好</h2>
+  <p>你选择的底色（四套之一：琥珀、白色、石板、松绿）和云端 AI 开关保存在每台设备系统的本地偏好设置（UserDefaults）中。底色不会上传。开关本身也不会上传，它只决定上面那些动作能不能使用中转。</p>
 
   <h2>第三方</h2>
-  <p>不嵌入第三方统计、广告、登录或社交 SDK。同步只使用 Apple 的 iCloud（CloudKit），不会与任何人共享你的笔记。</p>
+  <p>不嵌入第三方统计、广告、登录或社交 SDK。同步只使用 Apple 的 iCloud（CloudKit）。云端 AI 打开且你触发它时，卡片文本和限流 UUID 会由我们的 Cloudflare 中转以及 DeepSeek API 处理。中转不留副本。</p>
 
   <h2>儿童</h2>
-  <p>CoreNote 不是为儿童设计的产品，也不收集任何年龄段用户的个人信息。</p>
+  <p>CoreNote 不是为儿童设计的产品。我们不会有意收集儿童的个人信息。</p>
 
   <h2>你的选择</h2>
   <ul>
+    <li>让云端 AI 保持关闭，或稍后在「设置」里关掉。之后的提问、整理、投喂和回响都留在本机。</li>
     <li>可在应用内删除任意笔记；删除的笔记在回收站保留 7 天后自动清除，也可随时清空回收站。</li>
-    <li>可在应用内删除任意账户条目。</li>
-    <li>卸载应用会删除这台设备上的笔记、账户和偏好。已同步到 iCloud 的副本仍保留在你的 iCloud 中；可在卸载前于应用内删除，或在系统「设置 → 你的名字 → iCloud → 管理储存空间 → CoreNote」中删除。</li>
+    <li>可在应用内删除任意注册记录。</li>
+    <li>卸载应用会删除这台设备上的笔记、注册账号清单和偏好。已同步到 iCloud 的副本仍保留在你的 iCloud 中；可在卸载前于应用内删除，或在系统「设置 → 你的名字 → iCloud → 管理储存空间 → CoreNote」中删除。</li>
   </ul>
 
   <h2>政策更新</h2>
@@ -116,36 +126,41 @@
 
   <section id="zh-hant" lang="zh-Hant">
   <h1>CoreNote 隱私權政策</h1>
-  <p class="meta">生效日期：2026 年 11 月 12 日<br>開發者：CoreNote</p>
+  <p class="meta">生效日期：2026 年 11 月 13 日<br>開發者：CoreNote</p>
 
-  <p>CoreNote 是一款筆記 App。沒有帳號，沒有廣告，也沒有我們的伺服器。如果你登入了 iCloud，筆記會透過你自己的 iCloud 私人資料庫在你的裝置之間同步，我們看不到。在 App Store 上，這聲明為 Data Not Collected（不收集資料）。</p>
+  <p>CoreNote 是一款筆記 App。沒有帳號，沒有廣告。你的筆記和你寫下的註冊帳號清單保存在每台裝置上；登入了 iCloud 時，還會同步到你自己的 iCloud 私人資料庫，開發者無法讀取。雲端 AI 預設關閉，要等你自己打開。</p>
 
   <h2>一句話說明</h2>
-  <p>CoreNote 不收集你的任何個人資料。唯一的連網是 Apple 的 iCloud 把筆記同步到你自己的 iCloud 私人資料庫，我們無法讀取。</p>
-
-  <h2>我們收集哪些資訊</h2>
-  <p>不收集。CoreNote 不需要註冊，不蒐集姓名、電子郵件、位置、聯絡人、照片或裝置識別碼，不內建任何統計、廣告或當機回報 SDK。</p>
+  <p>筆記留在本機和你的 iCloud 私人資料庫。可選的雲端 AI 預設關閉；只有你開啟並使用問筆記、整理、投餵或回響時，相關卡片才會經一個不儲存內容的中轉送出。</p>
 
   <h2>筆記存在哪裡</h2>
-  <p>筆記用 SwiftData 儲存在每台裝置上 App 沙盒內的本地資料庫。裝置登入了 iCloud 時，CoreNote 也會把筆記同步到你自己 iCloud 帳號裡的 CloudKit 私人資料庫（容器 iCloud.com.box.CoreNote），登入同一個 Apple 帳號的 iPhone、iPad 和 Mac 會顯示相同的筆記。這份副本由 Apple 在你的 Apple 帳號下儲存和保護，開發者無法存取，也不營運任何伺服器。沒有登入 iCloud 時，筆記只留在這台裝置上。可在系統「設定 → 你的名字 → iCloud」中關閉同步。</p>
+  <p>筆記用 SwiftData 儲存在每台裝置上 App 沙盒內的本地資料庫。裝置登入了 iCloud 時，CoreNote 也會把筆記同步到你自己 iCloud 帳號裡的 CloudKit 私人資料庫（容器 iCloud.com.box.CoreNote），登入同一個 Apple 帳號的 iPhone、iPad 和 Mac 會顯示相同的筆記。這份副本由 Apple 在你的 Apple 帳號下儲存和保護，開發者無法存取。沒有登入 iCloud 時，筆記只留在這台裝置上。可在系統「設定 → 你的名字 → iCloud」中關閉同步。雲端 AI 關著或開著，這段儲存和同步都不變。</p>
 
-  <h2>帳號</h2>
-  <p>「帳號」頁是你自己填寫的一張清單：一個電子郵件或手機號碼，以及用它註冊過的 App 名稱。只儲存這些名稱，和筆記存在同一個 SwiftData 資料庫裡，並以同樣方式透過你的 iCloud 同步。CoreNote 從不儲存密碼，也不使用鑰匙圈、自動填寫或生物辨識。</p>
+  <h2>可選的雲端 AI</h2>
+  <p>雲端 AI 預設關閉。在你打開它，並且使用「問筆記」「一鍵整理」「隨手投餵歸位」或跨卡記憶回響增強之前，筆記不會發給模型。只有這一次動作相關的卡片文字會經 HTTPS，透過我們的無狀態 Cloudflare 加密中轉，發送到 DeepSeek API。中轉不儲存內容，也不記日誌，不把文字和你的姓名、電子郵件或 Apple 帳號關聯。</p>
+  <p>每次這類請求還會帶上一個在本機產生、保存在本地偏好裡的隨機 UUID，只用於中轉限流。它不是硬體識別碼，不是廣告識別碼，也不關聯你的身份。雲端 AI 關閉時不會發送這個 UUID。你可以隨時在 App 的「設定」裡關掉雲端 AI，回到純本機模式。之後歸位和回響只走裝置上的規則，不再離開這台裝置。</p>
 
-  <h2>外觀偏好</h2>
-  <p>你選擇的底色（四套之一：琥珀、白色、石板、松綠）儲存在每台裝置系統的本地偏好設定（UserDefaults）中，用於下次開啟時復原，不會同步或上傳。</p>
+  <h2>會處理哪些資訊</h2>
+  <p>CoreNote 不需要註冊，不為帳號蒐集姓名、電子郵件、位置、聯絡人或照片，不內建統計、廣告或當機回報 SDK。若你使用雲端 AI，上面說的卡片文字會為這項功能被處理，隨機限流 UUID 也只為這項功能被處理。兩者都不用於跨 App 或跨網站追蹤你。App Store 隱私標籤為此可選功能列出「其他使用者內容」和「裝置 ID」，不關聯到你，也不用於追蹤。</p>
+
+  <h2>註冊帳號清單</h2>
+  <p>註冊帳號清單是你自己填寫的文字：一個電子郵件或手機號碼，以及用它註冊過的 App 名稱。只儲存這些文字，和筆記存在同一個 SwiftData 資料庫裡，並以同樣方式透過你的 iCloud 同步。CoreNote 從不儲存密碼，也不使用鑰匙圈、自動填寫或生物辨識。只有在你已經打開雲端 AI，且剛才的動作需要這些卡片時，這份清單才會被送到中轉。</p>
+
+  <h2>偏好</h2>
+  <p>你選擇的底色（四套之一：琥珀、白色、石板、松綠）和雲端 AI 開關儲存在每台裝置系統的本地偏好設定（UserDefaults）中。底色不會上傳。開關本身也不會上傳，它只決定上面那些動作能不能使用中轉。</p>
 
   <h2>第三方</h2>
-  <p>不內嵌第三方統計、廣告、登入或社群 SDK。同步只使用 Apple 的 iCloud（CloudKit），不會與任何人分享你的筆記。</p>
+  <p>不內嵌第三方統計、廣告、登入或社群 SDK。同步只使用 Apple 的 iCloud（CloudKit）。雲端 AI 打開且你觸發它時，卡片文字和限流 UUID 會由我們的 Cloudflare 中轉以及 DeepSeek API 處理。中轉不留副本。</p>
 
   <h2>兒童</h2>
-  <p>CoreNote 不是為兒童設計的產品，也不收集任何年齡層使用者的個人資訊。</p>
+  <p>CoreNote 不是為兒童設計的產品。我們不會有意收集兒童的個人資訊。</p>
 
   <h2>你的選擇</h2>
   <ul>
+    <li>讓雲端 AI 保持關閉，或稍後在「設定」裡關掉。之後的提問、整理、投餵和回響都留在本機。</li>
     <li>可在 App 內刪除任一筆記；刪除的筆記在垃圾桶保留 7 天後自動清除，也可隨時清空垃圾桶。</li>
-    <li>可在 App 內刪除任一帳號項目。</li>
-    <li>解除安裝 App 會刪除這台裝置上的筆記、帳號和偏好設定。已同步到 iCloud 的副本仍保留在你的 iCloud 中；可在解除安裝前於 App 內刪除，或在系統「設定 → 你的名字 → iCloud → 管理儲存空間 → CoreNote」中刪除。</li>
+    <li>可在 App 內刪除任一註冊紀錄。</li>
+    <li>解除安裝 App 會刪除這台裝置上的筆記、註冊帳號清單和偏好設定。已同步到 iCloud 的副本仍保留在你的 iCloud 中；可在解除安裝前於 App 內刪除，或在系統「設定 → 你的名字 → iCloud → 管理儲存空間 → CoreNote」中刪除。</li>
   </ul>
 
   <h2>政策更新</h2>
