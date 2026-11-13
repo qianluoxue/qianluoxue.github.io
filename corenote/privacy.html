@@ -43,6 +43,7 @@
   <h2>Optional Cloud AI</h2>
   <p>Cloud AI is off by default. Nothing from your notes is sent to a model until you turn it on and then use one of these actions: ask the notebook, tidy a card, file a tossed line, or strengthen a cross-card memory echo. Only the related card text for that action is sent. It goes over HTTPS through our stateless Cloudflare relay to the DeepSeek API. The relay does not store the content and does not log it. It does not attach the text to your name, email, or Apple Account.</p>
   <p>With each of those requests the app also sends a random UUID created on the device and kept in local preferences. It is used only to rate-limit the relay. It is not a hardware identifier, not an advertising identifier, and not linked to your identity. The UUID is not sent while Cloud AI is off. You can turn Cloud AI off at any time in the app's Settings and return to on-device filing and echoes. Rules on the device then place tossed lines and suggest related cards; those steps do not leave the device.</p>
+  <p>Cards you move into Private are isolated in code from every AI feature. Even with Cloud AI turned on, they are never included in any outgoing request.</p>
 
   <h2>What is processed</h2>
   <p>CoreNote has no sign-up and does not gather your name, email, location, contacts, or photos for an account. It embeds no analytics, advertising, or crash-reporting SDK. If you use Cloud AI, the card text described above is processed to provide that feature, and the random rate-limit UUID is processed for the same feature. Neither is used to track you across apps or websites. The App Store privacy label lists Other User Content and Device ID for this optional feature, not linked to you and not used for tracking.</p>
@@ -91,6 +92,7 @@
   <h2>可选的云端 AI</h2>
   <p>云端 AI 默认关闭。在你打开它，并且使用「问笔记」「一键整理」「随手投喂归位」或跨卡记忆回响增强之前，笔记不会发给模型。只有这一次动作相关的卡片文本会经 HTTPS，通过我们的无状态 Cloudflare 加密中转，发送到 DeepSeek API。中转不存储内容，也不记日志，不把文本和你的姓名、邮箱或 Apple 账户关联。</p>
   <p>每次这类请求还会带上一个在本机生成、保存在本地偏好里的随机 UUID，只用于中转限流。它不是硬件标识符，不是广告标识符，也不关联你的身份。云端 AI 关闭时不会发送这个 UUID。你可以随时在应用的「设置」里关掉云端 AI，回到纯本机模式。之后归位和回响只走设备上的规则，不再离开这台设备。</p>
+  <p>移入「私密」分区的卡片在代码层面与所有 AI 功能隔离，即使开启云端 AI，也绝不会包含在任何外发请求中。</p>
 
   <h2>会处理哪些信息</h2>
   <p>CoreNote 不要求注册，不为账号采集姓名、邮箱、位置、通讯录或照片，不接入统计、广告或崩溃上报 SDK。若你使用云端 AI，上面说的卡片文本会为这项功能被处理，随机限流 UUID 也只为这项功能被处理。两者都不用于跨 App 或跨网站追踪你。App Store 隐私标签为此可选功能列出「其他用户内容」和「设备 ID」，不关联到你，也不用于追踪。</p>
@@ -139,6 +141,7 @@
   <h2>可選的雲端 AI</h2>
   <p>雲端 AI 預設關閉。在你打開它，並且使用「問筆記」「一鍵整理」「隨手投餵歸位」或跨卡記憶回響增強之前，筆記不會發給模型。只有這一次動作相關的卡片文字會經 HTTPS，透過我們的無狀態 Cloudflare 加密中轉，發送到 DeepSeek API。中轉不儲存內容，也不記日誌，不把文字和你的姓名、電子郵件或 Apple 帳號關聯。</p>
   <p>每次這類請求還會帶上一個在本機產生、保存在本地偏好裡的隨機 UUID，只用於中轉限流。它不是硬體識別碼，不是廣告識別碼，也不關聯你的身份。雲端 AI 關閉時不會發送這個 UUID。你可以隨時在 App 的「設定」裡關掉雲端 AI，回到純本機模式。之後歸位和回響只走裝置上的規則，不再離開這台裝置。</p>
+  <p>移入「私密」分區的卡片在程式層面與所有 AI 功能隔離，即使開啟雲端 AI，也絕不會包含在任何外發請求中。</p>
 
   <h2>會處理哪些資訊</h2>
   <p>CoreNote 不需要註冊，不為帳號蒐集姓名、電子郵件、位置、聯絡人或照片，不內建統計、廣告或當機回報 SDK。若你使用雲端 AI，上面說的卡片文字會為這項功能被處理，隨機限流 UUID 也只為這項功能被處理。兩者都不用於跨 App 或跨網站追蹤你。App Store 隱私標籤為此可選功能列出「其他使用者內容」和「裝置 ID」，不關聯到你，也不用於追蹤。</p>
